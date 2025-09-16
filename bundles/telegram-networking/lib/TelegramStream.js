@@ -54,6 +54,8 @@ class TelegramStream extends TransportStream
     s = s.replaceAll("<bold>", "<b>");
     s = s.replaceAll("</bold>", "</b>");
 
+    s = s.replaceAll("<br>", "\n");
+
     return s;
   }
 
