@@ -1,0 +1,16 @@
+---
+body: |
+    Type <i>commands</i> to see a list of possible commands.
+    Type <i>help [command]</i> to see more information about that command.
+    Type <i>help search [keyword]</i> to search the helpfiles by keyword.
+
+    Command usage will show arguments as either [optional] or {required}, e.g., 
+    
+    <i>look [thing]</i> in this case [thing] can be ommited, by default you will look at the current room
+    
+    or 
+    
+    <i>get {item} [container]</i> in this case {item} is mandatory, and [container] can be ommited, if you want to get something from the room. A container can be anything that holds other items. Like a table, or a box.
+
+
+    You can use single quotes to mention items with multiple words in their name, e.g. <i>get 'iron key'</i>, though picking the most descriptive word will also work, e.g. <i>get iron</i>

@@ -1,0 +1,3 @@
+[submodule "bundles/bundle-areas/areas/lionworts"]
+	path = bundles/bundle-areas/areas/lionworts
+	url = git@github.com:iamswiftwol/lionworts.git

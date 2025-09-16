@@ -1,0 +1,6 @@
+---
+command: quit
+body: |
+  Go back to the beginning (cannot be in combat when quitting)
+related:
+- save

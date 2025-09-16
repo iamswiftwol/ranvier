@@ -1,0 +1,69 @@
+- id: rat
+  keywords: ['rat']
+  name: A Rat
+  level: 2
+  description: "The rat's beady red eyes dart frantically, its mouth foaming as it scampers about.<image>rat.png<image>"
+  script: 'rat'
+  items: ['house:sliceofcheese']
+  quests: ['house:onecheeseplease']
+  behaviors:
+    combat: true
+    ranvier-wander:
+      interval: 20
+      restrictTo: ['house:main-hall', 'house:living-room', 'house:dinning-room', 'house:kitchen']
+  attributes:
+    health: 100
+    energy: 100
+- id: aggro-npc-zombie
+  keywords: ["aggro", "zombie"]
+  level: 2
+  name: "Aggressive ZombieLion"
+  description: >-
+    This ZombieLion is angry and will attach anyone that comes close!.
+  attributes:
+    health: 100
+    strength: 15
+  behaviors:
+    combat: true
+    ranvier-aggro:
+      delay: 5
+      towards:
+        players: true
+        npcs: ["house:rat"]
+- id: wiseoldman
+  keywords: ["wise", "old", "man"]
+  name: "Wise Old Man"
+  level: 99
+  script: 'wiseoldman'
+  description: "A wise looking old man sits on the ground with legs crossed."
+- id: puppy
+  keywords: ["puppy", "dog", "loyal", "wide", "eyed", "wide-eyed"]
+  name: A Puppy
+  description: "A wide-eyed puppy stares up at you."
+  level: 1
+  script: 'puppy'
+- id: jacob-marley
+  keywords: ["jacob", "marley", "ghost"]
+  name: "Jacob Marley"
+  level: 99
+  script: 'jacob-marley'
+  description: "A Phantom Lion, wearing pince-nez glasses and wrapped in heavy chains and a multitude of iron locks. "
+- id: christmas-past
+  keywords: ["christmas", "past", "ghost"]
+  name: "Lion of Christmas Past"
+  level: 99
+  script: 'christmas-past'
+  description: "A strange figure—much like a Cub: yet not so like a Cub as like an old Lioness. Her mane is white as if with age; and yet the face has not a wrinkle in it. From deep within her mane shimmers light like a thousand stars."
+- id: christmas-present
+  keywords: ["christmas", "present", "ghost"]
+  name: "Lion of Christmas Present"
+  level: 99
+  script: 'christmas-present'
+  description: "In an easy state upon this couch of food, there now sits a jolly Giant Lion, glorious to see in his curly white fur; bearing a glowing torch."
+- id: christmas-future
+  keywords: ["christmas", "future", "ghost"]
+  name: "Lion of Christmas Future"
+  level: 99
+  script: 'christmas-future'
+  description: "You feel a powerful presence behind you, imposing and grim. Instinctively, you know not to turn to look, but instead to peer deeper into the water in front of you."
+  

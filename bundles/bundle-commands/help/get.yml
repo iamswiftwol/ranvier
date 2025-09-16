@@ -1,0 +1,24 @@
+---
+command: get
+body: |
+  Get an item from the room or a container.
+
+  If the item is on the floor, meaning it appers listed directly in the room's description, you can get it with <i>get {item}</i>, e.g. <i>get key</i>
+  For items with more than one word in the name, you can use single quotes, e.g <i>get 'iron key'</i>
+
+  If the item appears as the content in another item's description, then the item is in a container. A container can be a box, a table or also a bag.
+  You can get the item 'from' the container with <i>get {item} from {container}</i>, e.g <i>get 'treasure map' from 'wooden table'</i>
+
+  You can do <i>get all {container}</i>' to retrieve all items from a container.
+  To save even more time you can do <i>loot {container}</i> which is the same thing.
+
+related:
+  - drop
+  - give
+  - inventory
+  - put
+  - wear
+  - wield
+keywords:
+  - items
+  - inventory

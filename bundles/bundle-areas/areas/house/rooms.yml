@@ -1,0 +1,1257 @@
+- id: entrance
+  title: "Courtyard"
+  description: >-
+    You stand in the courtyard of an old, delapidated banking house on a lonely street in the great city of Liondon. It is Christmas Eve, but a cold fog has descended to steal the joy from this holiday evening. Behind you on the distant street, fellow Lions pass by, growling about the unmerry weather and rubbing their paws together in their coat pockets to stay warm. Gas lamps from the street only dimly light the courtyard, and the candles that flare in the windows of the neighbouring offices are only ruddy smears upon the palpable gray air. The <b>fog</b> is so dense that although the courtyard is narrow, the closest buildings are mere phantoms.
+  script: "entrance"
+  items:
+    - id: "house:fog"
+  exits:
+    - roomId: "house:main-door"
+      direction: north
+      leaveMessage: " comes in front of the main door."
+- id: main-door
+  title: "Mane Door"
+  description: >-
+    You approach the large wooden front door to the banking house. In the dim light of the courtyard, you see a Lion's head <b>door-knocker</b>, its bronze tarnished with age and encrusted in frost. There is something unusual about this door-knocker, however...  
+  script: "main-door"
+  items: ["house:door-knocker"]
+  exits:
+    - roomId: "house:main-hall"
+      direction: north
+      leaveMessage: " enters the house."
+  doors:
+    "house:main-hall":
+      locked: true
+      closed: true
+- id: main-hall
+  title: "Mane Hall"
+  description: >-
+    You enter the darkened foyer of the old building. The heavy door slams shut behind you and the sound resounds through the house like thunder. This building must have once been a busy banking house, with accounting offices here on the ground floor and living quarters for the owner on the floors above. It is silent now though: no sounds from the street or notes of Christmas cheer reach this place tonight. You are startled when a small gas lamp on the wall suddenly sputters to life on its own and casts eerie, flickering shadows across the peeling wallpaper. The air is heavy with the musty scent of old Lion fur. Upon the wall hangs a framed business <b>certificate</b> behind dusty glass. Perhaps it can offer a clue as to whose home and office you've entered.
+  items: ["house:cert-1"]
+  script: "main-hall"
+  exits:
+    - roomId: "house:main-door"
+      direction: south
+      leaveMessage: " is trying to go outside."    
+    - roomId: "house:study"
+      direction: west
+      leaveMessage: " is entering a room to the west."   
+    - roomId: "house:living-room"
+      direction: east
+      leaveMessage: " is entering a room to the east."    
+    - roomId: "house:stairs-gf"
+      direction: north
+      leaveMessage: " is going to the stairs."
+- id: study
+  title: "Study"
+  script: "study"
+  description: >-
+    You step quietly into a room that appears to have been some kind of study. The light that enters through the filmy windows is weak, but you can see rows of shelves of old and battered books in the darkness. The scent of aging paper and leather bookbinding hangs in the air. You love libraries but this one is a little too dreary for your liking. You are about to leave when your eye catches sight of an ancient <b>desk</b> at the back of the room.
+  items:
+    - id: "house:desk"
+      respawnChance: 90
+      replaceOnRespawn: true # when this chest respawns completely replace it so its contents get refreshed
+  exits:
+    - roomId: "house:main-hall"
+      direction: east
+      leaveMessage: " leaves."
+- id: living-room
+  title: "Receiving Room"
+  description: >-
+    Entering the receiving room, you immediately notice cracked wildebeest-leather armchairs and a faded Turkish rug. Cobwebs drape lazily from the wainscoting, and a forgotten fireplace stands cold and dark. Above the hearth is an old <b>painting</b> of a stern Lion in a black suit and tie. You find his piercing golden eyes unsettling.
+  items:
+    - id: "house:lion-1"
+  exits:
+    - roomId: "house:main-hall"
+      direction: west
+      leaveMessage: " leaves."    
+    - roomId: "house:dinning-room"
+      direction: north
+      leaveMessage: " leaves."
+- id: dinning-room
+  title: "Office"
+  description: >-
+    In the offices where the lion's share of work was once conducted stand two tall, <b>lectern</b>-like desks and two tall wooden chairs. It was here that the firm's accountants must have toiled away their days, reconciling payments and invoices, and logging every financial transaction of the company. Between the lecterns is a blackened iron stove, next to which you see a <b>pail</b> full of coals. Your keen nose barely catches the lingering, dirty scent of creosote and sulpher, but it has been many years since there was ever an ember lit to warm the room. On one of the lecterns, you notice a very old <b>book</b>, its spine embossed in dull gold writing.
+  items:
+    - id: "house:book-1"
+      respawnChance: 90
+      replaceOnRespawn: true
+    - id: "house:lectern"
+      respawnChance: 90
+      replaceOnRespawn: true
+    - id: "house:pail"
+      respawnChance: 90
+      replaceOnRespawn: true
+  exits:
+    - roomId: "house:living-room"
+      direction: south
+      leaveMessage: " leaves to the living room." 
+    - roomId: "house:kitchen"
+      direction: north
+      leaveMessage: " leaves to the kitchen."
+- id: kitchen
+  title: "The Kitchen"
+  description: >-
+    In the dimly lit kitchen, some rusted pots and pans hang from hooks, and chipped, mismatched dishes line the dusty shelves.  Next to a giant iron pot is a stained and splattered paper bearing a <b>recipe</b> for stewed antelope. You think you catch the scent of charred wood and meat, but no home cooking has enriched this kitchen in many years.
+  items:
+    - id: "house:recipe-1"
+      respawnChance: 90
+      replaceOnRespawn: true
+  exits:
+    - roomId: "house:dinning-room"
+      direction: south
+      leaveMessage: " leaves to the dinning room."
+- id: stairs-gf
+  title: "Ground Floor Stairs"
+  script: "stairs-gf"
+  description: >-
+    You find yourself at the base of a flight of stairs wide enough to drive a coach-and-six up. The stairs are so broad, in fact, that half-a-dozen gas lamps from the street would not light them well enough, which is perhaps the reason why you think for a moment that you see other shapes moving out of reach in the <b>darkness</b>. 
+  exits:
+    - roomId: "house:stairs-1f"
+      direction: up
+      leaveMessage: " goes upstairs."
+    - roomId: "house:main-hall"
+      direction: south
+      leaveMessage: " goes to the main hall."
+    - roomId: "house:stairs-sub"
+      direction: down
+      leaveMessage: " leaves."
+- id: stairs-sub
+  title: "Spiral Stairs"
+  script: "stairs-sub"
+  description: >-
+    You enter the spiral stone stairway and descend into the depths of the building. It is impossibly dark, and you place a paw on the smooth stone wall to guide your way. It is cool to the touch, and as you go farther down the stairs, you notice the wall gets a little damp. You must be heading below ground...
+  exits:
+    - roomId: "house:stairs-gf"
+      direction: up
+      leaveMessage: " goes upstairs."
+    - roomId: "house:0-0"
+      direction: north
+      leaveMessage: " leaves."
+  lockedBy: "house:bronze-key"
+- id: stairs-1f
+  title: "First Floor Landing"
+  description: >-
+    At the top of the stairs, you find yourself in inky black darkness. As you wait for your eyes to adjust, you place a paw on the intricately carved wooden <b>railing</b> to steady yourself.
+  items: ["house:railing"]
+  exits:
+    - roomId: "house:stairs-gf"
+      direction: down
+      leaveMessage: " goes downstairs."
+    - roomId: "house:1f-hall"
+      direction: south
+      leaveMessage: " goes into the hall."    
+- id: attic-antechamber
+  title: "Attic Antechamber"
+  description: >-
+    You step carefully into the darkness that pervades this room, a small chamber in the attic of the house. Quiet as you try to be, your presence is immediately heralded by the squeaking and flapping of a colony of <b>bats</b>, who dart past your mane and ears before settling again somewhere else in the eaves. The peaked wooden roof rises in a triumph of beams overhead. As the bats settle, the dark, empty room is oppressively silent.
+  items: ["house:bats"]
+  exits:
+    - roomId: "house:attic-stairs"
+      direction: down
+      leaveMessage: " goes downstairs."
+    - roomId: "house:attic-chamber"
+      direction: south
+      leaveMessage: " goes into the chamber."
+- id: attic-chamber
+  title: "Attic Chamber"
+  script: "attic-chamber"
+  description: >-
+    You step into the large, mostly empty attic room. The wooden floors are bare, save for a thin layer of sawdust and fallen silt from the roof above. To your left is a tall garret <b>window</b> and to your right is an ordinary wood table, which evidently once served as some kind of work <b>bench</b>. Tiny motes of dust shimmer in the silver moonlight from the window. It seems strange to you that although the weather is dreary outside, the light finds its way into the room nonetheless. You stand perfectly still for you sense a presence in this room... a kindly but insistent presence. 
+  items:
+    - id: "house:bench"
+    - id: "house:attic-window"
+  exits:
+    - roomId: "house:attic-antechamber"
+      direction: north
+      leaveMessage: " goes into the antechamber."
+  doors:
+    "house:attic-antechamber":
+      lockedBy: "house:gold-key"
+      locked: true
+      closed: true  
+- id: 1f-hall
+  title: "First Floor Hall"
+  items: ["house:sideboard", "house:mirror", "house:windows"]
+  description: >-
+    You notice immediately that the decor on this floor is different than that of the business offices below; you now find yourself in the mane living quarters of the house. To your right is a bedroom and to your left is a type of quaint sitting room. Against the far wall opposite you is an elegant <b>sideboard</b> and <b>mirror</b>. Behind you are three large arched <b>windows</b>, but the chill fog is so dense outside that only very dim light enters this hall.
+  exits:
+    - roomId: "house:stairs-1f"
+      direction: north
+      leaveMessage: " goes downstairs."
+    - roomId: "house:room3"
+      direction: west
+      leaveMessage: " goes out to the room."
+    - roomId: "house:room2"
+      direction: east
+      leaveMessage: " goes into a nearby room."
+- id: room3
+  title: "Bedroom"
+  items: ["house:fireplace", "house:bed", "house:bell"]
+  script: "room3"
+  description: >-
+    Entering the bedroom, you are chilled through your fur to your bones. There is something odd and eternally cold about this place. On one side of the room stands an imposing, curtained, four-poster <b>bed</b>. The curtains that enclose it are ghostly pale and sheer. The <b>fireplace</b> is an old one, built by some Dutch merchant long ago, and paved all round with quaint, illustrated tiles. In the corner of the room hangs a simple, disused <b>bell</b>, used long ago for some unknown purpose. It feels strange to be here, in some other Lion's private space, but you have the strangest sensation that you are not alone.
+  exits:
+    - roomId: "house:1f-hall"
+      direction: east
+      leaveMessage: " goes into the house."
+    - roomId: "house:closet2"
+      direction: north
+      leaveMessage: " goes into the closet."
+- id: room1
+  title: "Lumber Room"
+  description: >-
+    In the lumber room, the household storage room, sits a collection of unused furniture eerily draped in pale dust cloth. Scattered about the room is disused domestic bric-a-brac: empty wooden chests, a wrought-iron fireplace-guard, forgotten shoes, two fish-baskets, a washing-stand on three legs, and a collection of fireplace pokers and tongs. Even when the house was inhabited, this room was infrequently visited, and the air is thick and stale. Amid all of this clutter, a curious metallic <b>box</b> catches your eye.
+  items: 
+    - id: "house:strange-box"
+      respawnChance: 90
+      replaceOnRespawn: true
+  exits:
+    - roomId: "house:room2"
+      direction: south
+      leaveMessage: " goes into a nearby room."
+- id: room2
+  title: "Sitting Room"
+  description: >-
+    You enter a sitting room off the mane hall. Despite your eerie experiences in the house so far, this room seems to offer a moment of holiday calm and solace. A beautiful, wide Turkish rug covers a broad plank wood floor. A velvet chaise and two wing chairs flank a handsome dark table in the center of the room. Old garlands and holly sprigs, though long-since dried out, still hang on the walls and offer a trace of a festive pine scent. On the table, you see a keepsake <b>scrapbook</b>, a <b>tea set</b>, and a small, elegant Christmas <b>pyramid</b>.  
+  items: ["house:scrapbook", "house:tea-set", "house:pyramid"]
+  exits:
+    - roomId: "house:1f-hall"
+      direction: west
+      leaveMessage: " goes into the hall."    
+    - roomId: "house:room1"
+      direction: north
+      leaveMessage: " goes into a nearby room."
+- id: closet2
+  title: "A Closet"
+  items: ["house:tapestry", "house:shirts"]
+  description: >-
+    You open the door to what appears to be a small cedar closet. As you step inside, however, it reveals itself to be surprisingly roomy. The space feels especially large because of the paucity of clothing in here; there are a two, nearly identical dark suits now peppered with moth holes and several starched <b>shirts</b> hanging from a beam, and that is all. What captures your attention, however, is the far wall of the closet, where a peculiar, ornate <b>tapestry</b> hangs.
+  exits:
+    - roomId: "house:room3"
+      direction: south
+      leaveMessage: " goes into the room."
+    - roomId: "house:secret"
+      direction: north
+      leaveMessage: " goes into the secret room."
+- id: secret
+  title: "A Secret Room"
+  script: "secret"
+  description: >-
+   The door swings open silently, and you enter a room unlike any other in this house. Marvelously painted floor-to-ceiling panels surround you on every side, each panel depicting a different moment of one Lion's life. The artistry of the images is astounding, and each would be at home in Liondon's finest art museums. Against the far wall stands an enormous grandfather <b>clock</b> next to a door in the painted panels. You can still smell trace notes of the cedar from the closet behind you, as well as another, familiar but indescribable scent. Though you are seemingly alone in this room, you sense a powerful presence inhabiting the space with you.
+  items: ["house:clock"]
+  exits:
+    - roomId: "house:closet2"
+      direction: south
+      leaveMessage: " goes into the closet."    
+    - roomId: "house:attic-stairs"
+      direction: west
+      leaveMessage: " goes into the other room."
+  doors:
+    "house:closet2":
+      lockedBy: "house:iron-key"
+      locked: true
+      closed: true
+- id: attic-stairs
+  title: "Hidden Stairs"
+  description: >-
+   A small, rickety set of steep wooden steps connects the clock room to the garret of the house. You test your weight on the creaking wood before using the steps, and they prove so steep that you must use all four paws to steady yourself.
+  exits:
+    - roomId: "house:secret"
+      direction: east
+      leaveMessage: " goes into the other room."    
+    - roomId: "house:attic-antechamber"
+      direction: up
+      leaveMessage: " goes up."
+  doors:
+    "house:closet2":
+      lockedBy: "house:iron-key"
+      locked: true
+      closed: true
+
+- id: 0-0
+  title: Catacomb Chamber
+  description: >-
+    You emerge from the stairs into the old wine merchant cellars beneath the house. It is deathly quiet down here, and dark, and you are grateful to find that the oil lantern at the base of the stairs still lights easily. Its orange light grows as the flame takes the wick, and reveals a collection of old <b>casks</b> and and dense veil of cobwebs. On the far side of the chamber is an enormous, heavy looking oak door studded and reinforced with iron. Curiously, there is no handle or keyhole. A bronze <b>plaque</b> is embedded in the door.
+  items: ["house:casks", "house:plaque"]
+  script: "0-0"
+  exits:
+    - roomId: house:1-0
+      direction: north
+    # - roomId: house:0-1
+    #   direction: east
+    - roomId: house:stairs-sub
+      direction: south
+  doors:
+    "house:stairs-sub":
+      lockedBy: "house:bronze-key"
+      locked: true
+      closed: true
+- id: 0-1
+  title: Catacomb Chamber
+  description: >-
+    You enter a small chamber lined with wine racks. There must be a hundred bottles of wine in here, resting in uneven lines of dark glass. Pools of water fill in the indentations in the stone floor, and it is cold. You unconsciously tuck your chin into your mane for warmth. Your gaze is drawn to an ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,1.
+  exits:
+    - roomId: house:0-0
+      direction: west
+- id: 0-2
+  title: Catacomb Chamber
+  description: >-
+    You find more wine racks and some old burlap hanging from a hook. You have the sudden feline urge to stretch and pull on the burlap with your claws, but you decide to press on instead. You notice another plaque on the wall: 0,2.
+  exits:
+    - roomId: house:1-2
+      direction: north
+- id: 0-3
+  title: Catacomb Chamber
+  description: >-
+    Entering this small empty room, you hear the sound of water, slowly dripping, echoing from the passages beyond. It's a lonely sound. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,3.
+  exits:
+    - roomId: house:0-4
+      direction: east
+- id: 0-4
+  title: Catacomb Chamber
+  description: >-
+    You find another rack of dusty bottles of red wine. They are unlabeled, but appear quiet ancient. They probably taste like vinegar now, they're so old. You're tempted to try one, for a moment, but you resist. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,4.
+  exits:
+    - roomId: house:1-4
+      direction: north
+    - roomId: house:0-3
+      direction: west
+- id: 0-5
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you hear the squeaking of mice whom you've startled out of their normal mousy routines. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,5.
+  exits: []
+- id: 0-6
+  title: Catacomb Chamber
+  description: >-
+    More wine racks, but this time you must pick your way carefully around them: one of the bottles has shattered on the stone floor, and you'd prefer not to get glass in the pads of your paws. While gingerly stepping over the long-dried wine puddle, your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,6.
+  exits:
+    - roomId: house:1-6
+      direction: north
+    - roomId: house:0-7
+      direction: east
+- id: 0-7
+  title: Catacomb Chamber
+  description: >-
+    Your lantern catches the gleaming red eyes of a rat as he scurries past. You can hear him squeaking to himself about his last-minute Christmas Eve errands. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,7.
+  exits:
+    - roomId: house:0-6
+      direction: west
+    - roomId: house:0-8
+      direction: east
+- id: 0-8
+  title: Catacomb Chamber
+  description: >-
+    In this chamber you find some discarded broken wine casks and a pallet of old, moldy wood. Nothing all that interesting. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 0,8.
+  exits:
+    - roomId: house:0-7
+      direction: west
+- id: 0-9
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 0,9, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:1-9
+      direction: north
+- id: 1-0
+  title: Catacomb Chamber
+  script: "1-0"
+  description: >-
+    You find more wine racks and some old burlap hanging from a hook. You have the sudden feline urge to stretch and pull on the burlap with your claws, but you decide to press on instead. You notice another plaque on the wall: 1,0.
+  exits:
+    - roomId: house:0-0
+      direction: south
+    - roomId: house:2-0
+      direction: north
+  doors:
+    "house:0-0":
+      locked: true
+      closed: true
+- id: 1-1
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,1, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 1-2
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,2, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:0-2
+      direction: south
+- id: 1-3
+  title: Catacomb Chamber
+  description: >-
+    You are startled when you enter the next chamber and your lantern is reflected dully back at you from a tarnished <b>suit of armor</b> against the wall. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 1,3.
+  exits: []
+- id: 1-4
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,4, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:0-4
+      direction: south
+    - roomId: house:1-5
+      direction: east
+- id: 1-5
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,5, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:1-4
+      direction: west
+    - roomId: house:1-6
+      direction: east
+- id: 1-6
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,6, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:0-6
+      direction: south
+    - roomId: house:1-5
+      direction: west
+    - roomId: house:1-7
+      direction: east
+- id: 1-7
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,7, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:2-7
+      direction: north
+    - roomId: house:1-6
+      direction: west
+    - roomId: house:1-8
+      direction: east
+- id: 1-8
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,8, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:1-7
+      direction: west
+- id: 1-9
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 1,9, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:0-9
+      direction: south
+- id: 2-0
+  title: Catacomb Chamber
+  description: >-
+    Entering this small empty room, you hear the sound of water, slowly dripping, echoing from the passages beyond. It's a lonely sound. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,0.
+  exits:
+    - roomId: house:1-0
+      direction: south
+    - roomId: house:2-1
+      direction: east
+- id: 2-1
+  title: Catacomb Chamber
+  description: >-
+    You find another rack of dusty bottles of red wine. They are unlabeled, but appear quiet ancient. They probably taste like vinegar now, they're so old. You're tempted to try one, for a moment, but you resist. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,1.
+  exits:
+    - roomId: house:3-1
+      direction: north
+    - roomId: house:2-0
+      direction: west
+    - roomId: house:2-2
+      direction: east
+- id: 2-2
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you hear the squeaking of mice whom you've startled out of their normal mousy routines. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,2.
+  exits:
+    - roomId: house:2-1
+      direction: west
+- id: 2-3
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 2,3, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 2-4
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 2,4, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 2-5
+  title: Catacomb Chamber
+  description: >-
+    More wine racks, but this time you must pick your way carefully around them: one of the bottles has shattered on the stone floor, and you'd prefer not to get glass in the pads of your paws. While gingerly stepping over the long-dried wine puddle, your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,5.
+  exits:
+    - roomId: house:3-5
+      direction: north
+- id: 2-6
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 2,6, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:2-7
+      direction: east
+- id: 2-7
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 2,7, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:1-7
+      direction: south
+    - roomId: house:2-6
+      direction: west
+- id: 2-8
+  title: Catacomb Chamber
+  description: >-
+    Your lantern catches the gleaming red eyes of a rat as he scurries past. You can hear him squeaking to himself about his last-minute, subterranean Christmas Eve errands, and the outrageous prices of toys for his many, many children. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,8.
+  exits:
+    - roomId: house:2-9
+      direction: east
+- id: 2-9
+  title: Catacomb Chamber
+  description: >-
+    In this chamber, you find some discarded broken wine casks and a pallet of old, moldy wood; nothing all that interesting. Your attention is drawn instead to some old burlap hanging from a hook. You have the sudden feline urge to stretch and pull on the burlap with your claws, but you decide to press on instead. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 2,9.
+  exits:
+    - roomId: house:3-9
+      direction: north
+    - roomId: house:2-8
+      direction: west
+- id: 3-0
+  title: Catacomb Chamber
+  items:
+  - id: "house:suit-of-armor"
+  description: >-
+    You are startled when you enter the next chamber and your lantern is suddenly reflected dully back at you from a tarnished <b>suit of armor</b> against the wall. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,0.
+  exits:
+    - roomId: house:4-0
+      direction: north
+    - roomId: house:3-1
+      direction: east
+- id: 3-1
+  title: Catacomb Chamber
+  description: >-
+    You enter a chamber with more rows of old oak casks. They emit a pleasing scent of wood and wine. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,1.
+  exits:
+    - roomId: house:2-1
+      direction: south
+    - roomId: house:3-0
+      direction: west
+    - roomId: house:3-2
+      direction: east
+- id: 3-2
+  title: Catacomb Chamber
+  description: >-
+    Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,2.
+  exits:
+    - roomId: house:3-1
+      direction: west
+    - roomId: house:3-3
+      direction: east
+- id: 3-3
+  title: Catacomb Chamber
+  description: >-
+    In this chamber you find some old burlap sacks, forgotten and mouldering in the dark. It's a shame how some people let their homes go like this. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,3.
+  exits:
+    - roomId: house:4-3
+      direction: north
+    - roomId: house:3-2
+      direction: west
+- id: 3-4
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 3,4, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 3-5
+  title: Catacomb Chamber
+  description: >-
+    Upon entering this chamber, you stop short. What was that noise behind you? Is someone following you?! You realize to your embarrassment, however, that it was just the swishing of your own tail. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,5.
+  exits:
+    - roomId: house:2-5
+      direction: south
+    - roomId: house:4-5
+      direction: north
+    - roomId: house:3-6
+      direction: east
+- id: 3-6
+  title: Catacomb Chamber
+  description: >-
+    No! It wasn't the sound of your own swishing tail this time! Rather, it was a high and ethereal whispering voice, warning you of dreadful secrets further along in this strange dungeon... oh, wait, no, no, it was just your tail again. You decide to hold it in your paws. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,6.
+  exits:
+    - roomId: house:3-5
+      direction: west
+- id: 3-7
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 3,7, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 3-8
+  title: Catacomb Chamber
+  description: >-
+    More wine casks in here. Geez, how much was Scrooge charging for all this space? He must have made a killing renting to these merchants. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,8.
+  exits:
+    - roomId: house:4-8
+      direction: north
+    - roomId: house:3-9
+      direction: east
+- id: 3-9
+  title: Catacomb Chamber
+  description: >-
+    The thought suddenly crosses your mind that you're alone on Christmas Eve, trespassing in a haunted banking house cellar, and you will very likely meet a terrible ghost soon. You could be home right now with the family, hanging four stockings per Cub on the hearth and eating traditional antelope pie. Ever the adventurer, you. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 3,9.
+  exits:
+    - roomId: house:2-9
+      direction: south
+    - roomId: house:4-9
+      direction: north
+    - roomId: house:3-8
+      direction: west
+- id: 4-0
+  title: Catacomb Chamber
+  description: >-
+    Well, we're back to wine casks. One of them appears to be a bit leaky; a small pool of old, stale wine collects under the spigot of one of the barrels, and gives the room the heady odor of fermentation. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,0.
+  exits:
+    - roomId: house:3-0
+      direction: south
+    - roomId: house:4-1
+      direction: east
+- id: 4-1
+  title: Catacomb Chamber
+  description: >-
+    More casks. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,1.
+  exits:
+    - roomId: house:5-1
+      direction: north
+    - roomId: house:4-0
+      direction: west
+    - roomId: house:4-2
+      direction: east
+- id: 4-2
+  title: Catacomb Chamber
+  description: >-
+    More wine bottles. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,2.
+  exits:
+    - roomId: house:4-1
+      direction: west
+    - roomId: house:4-3
+      direction: east
+- id: 4-3
+  title: Catacomb Chamber
+  description: >-
+    More casks and more wine bottles. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,3.
+  exits:
+    - roomId: house:3-3
+      direction: south
+    - roomId: house:4-2
+      direction: west
+    - roomId: house:4-4
+      direction: east
+- id: 4-4
+  title: Catacomb Chamber
+  description: >-
+    More casks, fewer wine bottles. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,4.
+  exits:
+    - roomId: house:4-3
+      direction: west
+    - roomId: house:4-5
+      direction: east
+- id: 4-5
+  title: Catacomb Chamber
+  description: >-
+    Fewer casks, many many more wine bottles. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,5.
+  exits:
+    - roomId: house:3-5
+      direction: south
+    - roomId: house:4-4
+      direction: west
+    - roomId: house:4-6
+      direction: east
+- id: 4-6
+  title: Catacomb Chamber
+  description: >-
+    Piles of burlap. So much burlap. Why is there so much burlap down here? What were they doing with it all? Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,6.
+  exits:
+    - roomId: house:4-5
+      direction: west
+- id: 4-7
+  title: Catacomb Chamber
+  description: >-
+    You enter this chamber only to glimpse the back of yourself leaving the chamber through another exit. You blink. That couldn't have just happened. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,7.
+  exits:
+    - roomId: house:5-7
+      direction: north
+    - roomId: house:4-8
+      direction: east
+- id: 4-8
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you think back on your Cubhood, when you and friends would sneak into the basement of your school, and use the secret tunnels there to explore the sewers and catacombs of underground Liondon without your teachers and parents knowing. Those excursions never ever ever ever ended well. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,8.
+  exits:
+    - roomId: house:3-8
+      direction: south
+    - roomId: house:5-8
+      direction: north
+    - roomId: house:4-7
+      direction: west
+    - roomId: house:4-9
+      direction: east
+- id: 4-9
+  title: Catacomb Chamber
+  description: >-
+    It's around this time that you realize a map would be really helpful. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 4,9.
+  exits:
+    - roomId: house:3-9
+      direction: south
+    - roomId: house:4-8
+      direction: west
+- id: 5-0
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you interrupt two mice having a pleasant Christmas Eve tea together. The moment they see you, they flee, leaving their tiny ceramic mugs rattling on their tiny ceramic saucers. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,0.
+  exits:
+    - roomId: house:6-0
+      direction: north
+    - roomId: house:5-1
+      direction: east
+- id: 5-1
+  title: Catacomb Chamber
+  description: >-
+    In this chamber, your ears catch the sound of something behind the wall. Pressing your head to the stone, you realize it is the unmistakable sound of gnomes chiseling away, building an elaborate tunnel in the walls. You silently wish a Merry Christmas to those ever-industrious gnomes and continue on your way. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,1.
+  exits:
+    - roomId: house:4-1
+      direction: south
+    - roomId: house:6-1
+      direction: north
+    - roomId: house:5-0
+      direction: west
+- id: 5-2
+  title: Catacomb Chamber
+  description: >-
+    You are unsurprised to discover more wine casks in this chamber. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,2.
+  exits:
+    - roomId: house:6-2
+      direction: north
+    - roomId: house:5-3
+      direction: east
+- id: 5-3
+  title: Catacomb Chamber
+  description: >-
+    For all of the darkness, dankness, odors, ghosts, and abiding sense of foreboding, it's really not all that bad down here. You start to think about having a little pied-a-terre in the cellar and what life might be like if - wait no, it's a dungeon. You're in a dungeon. It's best if you keep moving. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,3.
+  exits:
+    - roomId: house:6-3
+      direction: north
+    - roomId: house:5-2
+      direction: west
+    - roomId: house:5-4
+      direction: east
+- id: 5-4
+  title: Catacomb Chamber
+  description: >-
+    Oh my stars! You are shocked and amazed to discover... more wine bottles! Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,4.
+  exits:
+    - roomId: house:6-4
+      direction: north
+    - roomId: house:5-3
+      direction: west
+    - roomId: house:5-5
+      direction: east
+- id: 5-5
+  title: Catacomb Chamber
+  description: >-
+    Another dank, dark, subterranean chamber. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,5.
+  exits:
+    - roomId: house:6-5
+      direction: north
+    - roomId: house:5-4
+      direction: west
+    - roomId: house:5-6
+      direction: east
+- id: 5-6
+  title: Catacomb Chamber
+  items:
+    - id: "house:pasteboard-box"
+  description: >-
+    This chamber is cramped from the presence of a workbench and a large collection of iron and wood cooperage tools: bench knives, block hooks, and dip rods, evidently for repairing the metal bands on wine casks. Your gaze in this room is not drawn to the ancient stone plaque embedded in the damp wall, for once (which, incidentally, bears the cryptic inscription of two numbers: 5,6), but rather to a small pasteboard parcel on the workbench.
+  exits:
+    - roomId: house:5-5
+      direction: west
+- id: 5-7
+  title: Catacomb Chamber
+  description: >-
+    As you step into this chamber, your lantern begins to dim and sputter. A cold draught flows over you and sets your fur on end. You are becoming more and more troubled by what exists in this labyrinth. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,7.
+  exits:
+    - roomId: house:4-7
+      direction: south
+    - roomId: house:6-7
+      direction: north
+- id: 5-8
+  title: Catacomb Chamber
+  description: >-
+    Your sense of unease and dread in this cellar dungeon is growing. You start humming a silly song to yourself to calm your nerves until you hear something very far away in another chamber humming back. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,8.
+  exits:
+    - roomId: house:4-8
+      direction: south
+    - roomId: house:5-9
+      direction: east
+- id: 5-9
+  title: Catacomb Chamber
+  items:
+    - id: "house:bones"
+  description: >-
+    Bones. You just entered this chamber and there are <b>bones</b> everywhere. You don't like this at all... Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 5,9.
+  exits:
+    - roomId: house:6-9
+      direction: north
+    - roomId: house:5-8
+      direction: west
+- id: 6-0
+  title: Catacomb Chamber
+  description: >-
+    As you step into this chamber, you begin to wonder if you will ever get out of this dungeon. The sound of dripping water very far away only adds to forelorn mood. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,0.
+  exits:
+    - roomId: house:5-0
+      direction: south
+    - roomId: house:7-0
+      direction: north
+    - roomId: house:6-1
+      direction: east
+- id: 6-1
+  title: Catacomb Chamber
+  description: >-
+    Entering this new chamber, you decide the best thing to do to steady your nerves is to repeatedly tell yourself, "I don't believe in spooks," despite the fact that you have already met several this evening. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,1.
+  exits:
+    - roomId: house:5-1
+      direction: south
+    - roomId: house:7-1
+      direction: north
+    - roomId: house:6-0
+      direction: west
+    - roomId: house:6-2
+      direction: east
+- id: 6-2
+  title: Catacomb Chamber
+  description: >-
+    You enter a chamber with wine casks, but you get the sense that they are evil wine casks. You can't put your claw on why exactly that is. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,2.
+  exits:
+    - roomId: house:5-2
+      direction: south
+    - roomId: house:7-2
+      direction: north
+    - roomId: house:6-1
+      direction: west
+    - roomId: house:6-3
+      direction: east
+- id: 6-3
+  title: Catacomb Chamber
+  description: >-
+    You enter a chamber with wine bottles, but you get the sense that they are evil wine bottles. You can't put your claw on why exactly that is. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,3.
+  items:
+    - id: "house:the-one-ring"
+  exits:
+    - roomId: house:5-3
+      direction: south
+    - roomId: house:7-3
+      direction: north
+    - roomId: house:6-2
+      direction: west
+- id: 6-4
+  title: Catacomb Chamber
+  description: >-
+    Another dank, dark subterranean chamber full of dread and secrets. You stifle a yawn. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,4.
+  exits:
+    - roomId: house:5-4
+      direction: south
+    - roomId: house:6-5
+      direction: east
+- id: 6-5
+  title: Catacomb Chamber
+  description: >-
+    What if you could get the money to renovate down here, and sublet out these chambers to tourists or university students? You'd have to get the foundation looked at, the mold removed, you'd probably have to evict all the ghosts, but it might not be a bad idea in this real estate market. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,5.
+  exits:
+    - roomId: house:5-5
+      direction: south
+    - roomId: house:6-4
+      direction: west
+    - roomId: house:6-6
+      direction: east
+- id: 6-6
+  title: Catacomb Chamber
+  description: >-
+    An assemblage of disused iron tools greets you as you enter this chamber. They might have existed here for centuries, they appear so ancient and forgotten, caked with rust and strung with spiderwebs. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,6
+  exits:
+    - roomId: house:7-6
+      direction: north
+    - roomId: house:6-5
+      direction: west
+- id: 6-7
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you see two wine casks, their taps open, and puddles of wine slick on the floor. About two dozen mice loll around in various states of drunkenness and stupor, some leaning on each other and singing, others stretched out and asleep. It seems they've been celebrating their Christmas holiday a bit early. You gingerly step around them so as not to interrupt their revelry, and continue on your way. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,7.
+  exits:
+    - roomId: house:5-7
+      direction: south
+- id: 6-8
+  title: Catacomb Chamber
+  description: >-
+    Despite your relentless dread and fear, you're actually starting to enjoy this dungeon. You have an idle thought that someone should make some kind of game for Cubs where they explore dungeons, fight monsters, and collect treasure. Bah, humbug, it would never work. You decide to press on. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,8.
+  exits:
+    - roomId: house:7-8
+      direction: north
+    - roomId: house:6-9
+      direction: east
+- id: 6-9
+  title: Catacomb Chamber
+  description: >-
+    When you step into this chamber, you understand immediately that you are in the presence of what can only be described as "evil." The room is completely empty, save for a puddle of water on the floor in which rests a small gold <b>ring</b>. Also, your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 6,9.
+  exits:
+    - roomId: house:5-9
+      direction: south
+    - roomId: house:6-8
+      direction: west
+- id: 7-0
+  title: Catacomb Chamber
+  description: >-
+    Something in your spirit tels you that you are getting closer to the end of this cellar. Dread rises like bile in your stomach. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,0.
+  exits:
+    - roomId: house:6-0
+      direction: south
+    - roomId: house:7-1
+      direction: east
+- id: 7-1
+  title: Catacomb Chamber
+  description: >-
+    Stepping into this room, you are intrigued by the sudden reflection of your lantern light in the wet walls opposite you. Your own reflection wavers in the water on the stone like some kind of novelty carnival mirror. Your amusement turns to cold fear, however, when you see the reflection of a Lion standing close behind you. When you gasp and turn to look, you find yourself alone. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,1.
+  exits:
+    - roomId: house:6-1
+      direction: south
+    - roomId: house:8-1
+      direction: north
+    - roomId: house:7-0
+      direction: west
+    - roomId: house:7-2
+      direction: east
+- id: 7-2
+  title: Catacomb Chamber
+  description: >-
+    The smell of mold assaults your nose upon entering this room. Against one wall is a pallet of wood, covered in sprouting fungi. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,2.
+  exits:
+    - roomId: house:6-2
+      direction: south
+    - roomId: house:7-1
+      direction: west
+    - roomId: house:7-3
+      direction: east
+- id: 7-3
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, you think for a moment that you hear the sound of rattling chains in a nearby room. When you stop to listen, however, you are greeted by a deafening silence. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,3.
+  exits:
+    - roomId: house:6-3
+      direction: south
+    - roomId: house:7-2
+      direction: west
+    - roomId: house:7-4
+      direction: east
+- id: 7-4
+  title: Catacomb Chamber
+  description: >-
+    You've never taken the time to really notice the lichen on the walls down here. It's actually kind of lovely, in a dismal, sickly kind of way. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,4.
+  exits:
+    - roomId: house:7-3
+      direction: west
+- id: 7-5
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 7,5, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-5
+      direction: north
+- id: 7-6
+  title: Catacomb Chamber
+  description: >-
+    You have the grim thought that should anything sinister befall you tonight, you would likely remain undiscovered in this labyrinth for years to come. You make a silent wish that the blessings of Christmas Eve and the good-hearted Spirits you've met tonight might protect you. Your gaze is drawn to the ancient stone plaque embedded in the damp wall. It bears the cryptic inscription of two numbers: 7,6.
+  exits:
+    - roomId: house:6-6
+      direction: south
+    - roomId: house:catacomb-end
+      direction: east
+- id: 7-7
+  title: Catacomb Chamber
+  description: >-
+    Entering this chamber, deep in the subterranean labyrinth, your gaze is drawn to the ancient stone plaque set in the damp wall. Its surface bears the cryptic inscription of two numbers, 7,7. But your attention immediately turns to a <b>pool</b> of black water in an enormous stone basin in the middle of the room, as well as to an ancient looking wooden <b>chest</b> in the corner. Something is terribly dreadful about this room, but it is a fear you know you must now face, with all the courage a Lion can muster.
+  exits:
+    - roomId: house:7-6
+      direction: west
+    - roomId: house:7-8
+      direction: east
+- id: 7-8
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 7,8, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:6-8
+      direction: south
+    - roomId: house:8-8
+      direction: north
+    - roomId: house:7-7
+      direction: west
+- id: 7-9
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 7,9, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-9
+      direction: north
+- id: 8-0
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,0, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-1
+      direction: east
+- id: 8-1
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,1, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:7-1
+      direction: south
+    - roomId: house:9-1
+      direction: north
+    - roomId: house:8-0
+      direction: west
+    - roomId: house:8-2
+      direction: east
+- id: 8-2
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,2, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-1
+      direction: west
+    - roomId: house:8-3
+      direction: east
+- id: 8-3
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,3, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:9-3
+      direction: north
+    - roomId: house:8-2
+      direction: west
+- id: 8-4
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,4, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-5
+      direction: east
+- id: 8-5
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,5, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:7-5
+      direction: south
+    - roomId: house:9-5
+      direction: north
+    - roomId: house:8-4
+      direction: west
+    - roomId: house:8-6
+      direction: east
+- id: 8-6
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,6, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:9-6
+      direction: north
+    - roomId: house:8-5
+      direction: west
+- id: 8-7
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,7, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:9-7
+      direction: north
+    - roomId: house:8-8
+      direction: east
+- id: 8-8
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,8, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:7-8
+      direction: south
+    - roomId: house:8-7
+      direction: west
+- id: 8-9
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 8,9, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:7-9
+      direction: south
+    - roomId: house:9-9
+      direction: north
+- id: 9-0
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,0, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 9-1
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,1, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-1
+      direction: south
+- id: 9-2
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,2, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits: []
+- id: 9-3
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,3, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-3
+      direction: south
+    - roomId: house:9-4
+      direction: east
+- id: 9-4
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,4, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:9-3
+      direction: west
+- id: 9-5
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,5, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-5
+      direction: south
+    - roomId: house:9-6
+      direction: east
+- id: 9-6
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,6, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-6
+      direction: south
+    - roomId: house:9-5
+      direction: west
+    - roomId: house:9-7
+      direction: east
+- id: 9-7
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,7, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:8-7
+      direction: south
+    - roomId: house:9-6
+      direction: west
+    - roomId: house:9-8
+      direction: east
+- id: 9-8
+  title: Catacomb Chamber
+  description: " similar dimly-lit space, but your gaze is drawn to an ancient
+    stone plaque affixed to the wall. Its surface bears the cryptic inscription
+    of two numbers, 9,8, hinting at a riddle yet to be solved, adding an extra
+    layer of mystery to the subterranean depths."
+  exits:
+    - roomId: house:9-7
+      direction: west
+    - roomId: house:catacomb-end
+      direction: east
+- id: catacomb-end
+  title: Catacomb Chamber
+  script: catacomb-end
+  description: >-
+    Entering this chamber, deep in the subterranean labyrinth, your gaze is drawn to the ancient stone plaque set in the damp wall. Its surface bears the cryptic inscription of two numbers, 7,7. But your attention immediately turns to a <b>pool</b> of black water in an enormous stone basin in the middle of the room, as well as to an ancient looking wooden <b>chest</b> in the corner. Something is terribly dreadful about this room, but it is a fear you know you must now face, with all the courage a Lion can muster.
+  items:
+    - id: "house:woodenchest"
+      respawnChance: 10
+      replaceOnRespawn: true
+    - id: "house:pool"
+  exits:
+    - roomId: house:7-6
+      direction: west
+    - roomId: house:entrance
+      direction: up

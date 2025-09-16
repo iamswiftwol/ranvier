@@ -1,0 +1,12 @@
+{
+  "name": "ranvier-bundle-telegram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.63.0",
+    "ws": "^3.3.3"
+  }
+}

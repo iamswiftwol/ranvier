@@ -1,0 +1,14 @@
+---
+command: open
+body: |
+  open a container or a door
+related:
+  - drop
+  - get
+  - give
+  - inventory
+  - wear
+  - wield
+keywords:
+  - items
+  - inventory

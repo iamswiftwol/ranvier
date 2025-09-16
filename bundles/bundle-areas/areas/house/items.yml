@@ -1,0 +1,365 @@
+- id: "plaque"
+  name: "Plaque"
+  roomDesc: "A plaque"
+  keywords: [ "plaque" ] 
+  description: >-
+    Dulled bronze lettering gleams in the light of your lantern: "You have done well to come this far, intrepid Lion. This door will prove impassable, however, for as long as it chooses to remain so. Return now to your Pride, and confer with your fellows about what you have witnessed thus far."
+  metadata:
+    noPickup: true
+- id: "cert-1"
+  name: "Old Certificate"
+  roomDesc: "A dusty framed Business Certificate"
+  keywords: [ "frame", "dusty", "certificate", "business", "business-certificate"] 
+  description: "You wipe the dust from the glass with your paw to see fine calligraphy stating: \"The City of Liondon Hereby Awards This LICENSE of Operation To The Firm of Scrooge and Roarley Financiers, April 1, 1823.\" As you read, you imagine you can hear the popping of champagne bottles and clapping paws that heralded the start of this once prosperous endeavor."
+  metadata:
+    noPickup: true
+- id: "book-1"
+  name: "Very Old Book"
+  roomDesc: "A very old book"
+  keywords: [ "old", "book","old-book"] 
+  description: "Your paws grasp the fragile book delicately. Carefully you open the tome, the spine cracking at the disturbence. A large black stamp on first page reads \"ACCOUNT Book.\" In thin, spidery ink, thousands of names of prominent Lions and a multitude of numbers are arranged in tidy columns and rows, reflecting years of loans, repayments, and commissions. Each entry is signed \"E.S.\" It's as if you could trace the entire lifetime of this one financier through all the transactions listed in this ledger."
+- id: "lectern"
+  name: "Lectern"
+  roomDesc: "A lectern"
+  keywords: [ "lectern"]
+  metadata:
+    noPickup: true 
+  description: >-
+    You can imagine that the clerks who worked at these tall desks must have been the very model of productivity and industriousness, but you are surprised to see that at least one Lion here was not solely business-minded. Tucked against the front bezel panel, you find a scrap of sketch paper with a little charcoal illustration of a holiday gnome playing in a snowball fight. The artist has signed it "Bob Scratchit, Christmas Eve, 1843"
+- id: "pail"
+  name: "Pail"
+  roomDesc: "A pail"
+  keywords: [ "pail"] 
+  description: >-
+    Inside the pail of old coals, you find a singed piece of paper with a curious poem scratched onto it: "<b>The King and the Queen</b>, Who wished to be seen, Had all of their clothes dyed rich <b>blue</b>. But when they spilled <b>jelly</b>, All over their bellies, Their <b>family</b> knew not what to do.
+  metadata:
+    noPickup: true
+- id: "recipe-1"
+  name: "Jacob's Antelope Stew Recipe"
+  roomDesc: "Jacob's Antelope Stew recipe"
+  keywords: [ "recipe", "stew", "jacob", "antelope", "jacob's-antelope-stew-recipe"] 
+  description: >-
+    Jacob's Antelope Stew... 20 pounds antelope meat, 5 sticks of butter, 1 gallon red wine, lots of stock!, 1 bush thyme, 20 tablespoons minced garlic, 10 bay leaves, 1 bunch minced rosemary leaves, 10 pounds potatoes, quartered 5 large onions, roughly chopped, 20 carrots - peeled and roughly chopped, 10 celery ribs - roughly chopped, 5 cups tomato paste. Generous pinch ground nutmeg, pepper, and to make more savory, don't forget the..." but here, the cooking stains have completely obscured the last important ingredient.
+- id: "fog"
+  name: "Dense Fog"
+  roomDesc: "A dense Fog"
+  keywords: [ "dense", "fog", "dense-fog" ]
+  description: "For a moment, it seems almost as though the dim candle flames from the neighbouring windows are dancing through the glass and into the fog like will-o-wisps. You rub your eyes with your paws and the candlelights are where they should be once again. Strange..."
+  metadata:
+    noPickup: true
+- id: "railing"
+  name: "Railing"
+  roomDesc: "Railing"
+  keywords: [ "railing" ]
+  description: >-
+    Countless claws over the years have left grooves in the wood of the bannister. One scratch, though, is intentional (if a little odd), and must have been the private joke of some young Cub playing on the stairs long ago. On the back of one of the ballustrades, the curious phrase, "/winterwonderland" is faintly showing through the wood stain.
+  metadata:
+    noPickup: true
+- id: "sideboard"
+  name: "Sideboard"
+  roomDesc: "A sideboard"
+  keywords: [ "sideboard" ]
+  description: >-
+    The sideboard is of elegant construction and seems in good condition given the state of the rest of the house. On a silver tray sits a long-forgotten calling card of some soliciting visitor: "Millicent Grumby, Snowman Construction Services For Holiday Cheer, and Experienced HandyLion"
+  metadata:
+    noPickup: true
+- id: "mirror"
+  name: "Mirror"
+  roomDesc: "A mirror"
+  keywords: [ "mirror" ]
+  description: >- 
+    You see yourself in the dark mirror and study yourself for the first time in a while. <i>How did you come to find yourself in this place? And why? You don't typically trespass in abandoned buildings, and on Christmas Eve no less... This whole thing is ludicrous!</i> You smooth your fur in the mirror, adjust your jacket, and tell yourself it's okay to stop and think about things sometimes. You decide to continue exploring.
+  metadata:
+    noPickup: true
+- id: "windows"
+  name: "Windows"
+  roomDesc: "Three arched windows"
+  keywords: [ "windows", "arched", "three", 'arched-windows', 'three-arched-windows']
+  description: "Behind you are three large arched windows that look out onto the dark and foggy courtyard from which you entered the building. Though there is only a little light entering from outside, you can discern an inscription set in stained glass at the base of the windows: \"Dum TEMPUS habemus operemur bonum\""
+  metadata:
+    noPickup: true
+- id: "scrapbook"
+  name: "Scrapbook"
+  roomDesc: "A scrapbook"
+  keywords: [ "scrapbook" ]
+  description: "The small canvas-bound volume appears especially precious and distinct from the accounting books you've encountered elsewhere in this house. You open the scrapbook to see a rather heartwarming collection of memorabilia within its pages: illustrated holiday postcards from around the world, dried poinsettia leaves pressed between pages, fragments of festive poems, poorly scratched out thank you cards from Cubs for various gifts, all beginning with the words \"Dearest UNCLE...\" It seems whoever kept this scrapbook held a secret soft spot in their heart for Christmas."
+  metadata:
+    noPickup: true
+- id: "tea-set"
+  name: "Tea Set"
+  roomDesc: "A tea set"
+  keywords: [ "tea", "set", 'tea-set' ]
+  description: >-
+    A three-tiered tea tray, teapot and mug are arranged carefully. Though so much in this house appears forgotten and tired, this ceramic set seems to have been particularly well cared-for, and remains in almost pristine condition. A small box of cocoa with the silver label, "Limited Edition," offers a bouquet of holiday scents of chocolate, nutmeg, and cinnamon.
+  metadata:
+    noPickup: true
+- id: "pyramid"
+  name: "Pyramid"
+  roomDesc: "A christmas pyramid"
+  keywords: [ "pyramid", "christmas", "christmas-pyramid" ]
+  description: "You remember Christmas pyramids from your cubhood, but you haven't seen one in many years. This pyramid is particularly well-crafted. The base of the delicate device holds several thin, unlit taper candles. The top of the structure holds a ring of tin fan blades angled to catch the rising heat from the candles. Hanging from the fan are three small golden Lions with bells on collars that bear each Lion's name: FAITH, MERCY, and LOVE. As you marvel at the craftsmanship of the pyramid, the candles suddenly, magically ignite, the fan begins to rotate slowly, and as the golden Lions begin to circle, the bells offer a clear, calming sound. Though the occurrence is mysterious, you are not alarmed."
+  metadata:
+    noPickup: true
+- id: "bell"
+  name: "Bell"
+  roomDesc: "A simple bell"
+  keywords: [ "bell","simple-bell" ]
+  description: >-
+    The simple bell hangs silent and still, but at one time communicated for some purpose now forgotten with a chamber in the highest story of the building. It is with great astonishment, and with a strange, inexplicable dread, that as you look, this bell begins to swing. It swings so softly in the outset that it scarcely makes a sound; but soon it rings out loudly, and soon so does every other bell in the house. But you are quite startled when another noise joins the din: the dreadful sound of dragging chains.
+  metadata:
+    noPickup: true
+- id: "fireplace"
+  name: "Fireplace"
+  roomDesc: "A fireplace"
+  keywords: [ "fireplace" ]
+  description: >- 
+    The white tiles surrounding the fireplace are decorated in blue ceramic ink. Five tiles near the top of the hearth spell out the word "PRIDE." Below those letters are illustrations of old Pride provebs: the Lion Wagmi, who watched the Moon crash to the earth, and whose great Roar sent it back to the heavens; the black panther Queen of Sheba, who Enterprised to rule fairly and wisely; the Lioness Chephira, who once descended into an underworld of Skeletons to bring back a Pride of Lions; and dozens of other leonine figures to attract your thoughts; but suddenly, the images on the tiles blur slowly into the likeness of an older, impassive Lion, with pince-nez glasses upon his nose. When you rub your eyes with your paws, the face is gone and the many other illustrations remain.
+  metadata:
+    noPickup: true
+- id: "bed"
+  name: "Bed"
+  roomDesc: "A bed"
+  keywords: [ "bed" ]
+  description: >-
+    You carefully claw aside the thin cloth curtain of the four-poster frame to investigate. A forgotten silk dressing gown and nightcap drape across the bed. A deep indentation in the downy bed remains from where some Lion made this his nightly repose years ago. Suddenly the curtains ripple as though a figure were moving on the other side, and a cold draught of air passes over you, but you cannot see its source. It sounds for a moment as though a Lion is whispering the word, "REGRET" but when you look on the other side of the curtain, no one is there.
+  metadata:
+    noPickup: true
+- id: "tapestry"
+  name: "Tapestry"
+  roomDesc: "A tapestry"
+  keywords: [ "tapestry" ]
+  description: >-
+    Despite the fragrant cedar of the closet, moths have feasted for some time on this tapestry. It is now pocked with holes, but the original design is still visible: a Pride of Lions toil in various professions throughout a lush garden: several Lions tilling soil, others collecting apples, yet another leading a small clutter of Cubs on a fishing expedition. A banner held aloft by two winged Lions is emblazoned with the word "WEALTH," at the top of the tapestry. What you find most intriguing, however, is what lies behind the curtain; where moths have eaten away the upper corner of the cloth, the tapestry hangs slightly askew to reveal the seam of what can only be a secret door.
+  metadata:
+    noPickup: true
+- id: "shirts"
+  name: "Shirts"
+  roomDesc: "Shirts"
+  keywords: [ "shirt", "shirts" ]
+  description: >-
+    You inspect the shirts, which are of fine quality, but nevertheless threadbare from frugal overuse. On each cuff is the monogram "e.a.s," and at each neck is a tag stating: "Aslan Tailors, purveyors of fine sartorial COMFORT"
+  metadata:
+    noPickup: true
+- id: "attic-window"
+  name: "Attic Window"
+  roomDesc: "A window"
+  keywords: [ "window" ]
+  description: >-
+    You look to the window, and realize that the light now brightening the empty attic is in fact the radiance of one enormous star. How it is visible through the fog, you cannot say, but its effect is resplendent. Suddenly, you hear a soft chiming of a clock far away, somewhere downstairs in the house: Bong! Bong! Your fur stands up on end, and you watch as the dust suspended in the starlight begins to swirl and coalesce into forms throughout the room. Crisp ivy and fragrant pine boughs drape the walls in garlands. Heaped up on the floor, to form a kind of throne, are wildebeest, antelope, game, poultry, brawn, great joints of meat, long wreaths of warthog-sausages, mince-pies, plum-puddings, barrels of oysters, red-hot chestnuts, cherry-cheeked apples, savory grasses for cats to gnaw on, juicy oranges, luscious pears, immense twelfth-cakes, and seething bowls of punch, that make the chamber dim with their delicious steam.
+  metadata:
+    noPickup: true
+- id: "bench"
+  name: "Bench"
+  roomDesc: "A bench"
+  keywords: [ "bench" ]
+  description: >-
+    You glance at the old wooden work bench and note a few rusted tools now draped in cobwebs and a few scraps of mottled paper. You can barely make out the words on one: "PRESENT mirth hath present laughter."
+  metadata:
+    noPickup: true
+- id: "bats"
+  name: "Bats"
+  roomDesc: "Bats"
+  keywords: [ "bat", "bats" ]
+  description: >-
+    Your sharp feline eyes adjust to the darkness and you realize you are staring directly at the bats hanging upside down in the eaves of the garret. One of them waves a foot at you in a friendly gesture before tucking his head into his wing to go back to sleep.
+  metadata:
+    noPickup: true
+- id: "casks"
+  name: "Casks"
+  roomDesc: "Casks"
+  keywords: [ "cask", "casks" ]
+  description: >-
+    The rich scent of wine and oak wood emenating from these casks fills your nostrils. You wonder what vintage these wines are, and for how long these casks have remained undisturbed down here. Your inspection, however, reveals little but the word "WINE" stenciled unhelpfully upon the dirty lids.
+  metadata:
+    noPickup: true
+- id: "clock"
+  name: "Clock"
+  roomDesc: "A clock"
+  keywords: [ "clock" ]
+  description: >-
+    As you move closer to study the clock, it seems to enlarge before your eyes, and the hands of the clock face begin to spin wildly. As they whir, you hear harmonic chimes echoing from somewhere deep in the house. When the clock finally comes to rest at 1, a tremendous bell sounds, Bong!
+  metadata:
+    noPickup: true
+- id: "door-knocker"
+  name: "Lion's Head Door Knocker"
+  roomDesc: "A Lion's Head Door Knocker"
+  keywords: [ "lion", "head", "door", "knocker", "door-knocker" ]
+  description: "You find this bronze Lion hypnotic. Its face is not angry or ferocious, but impassive. It is an older Lion from an older time, with golden pince-nez spectacles upon its nose. Suddenly, it begins to emenate its own pale and dismal light, and the fur of its mane is curiously stirred, as if by breath or hot air. The eyes, wide-open, remain perfectly motionless. A low, ghostly growl echoes from deep within... \"Be gone if ye be not of MERIT...\" Just as suddenly as it started, however, it ends; this unsettling spectre is just a simple bronze door-knocker again."
+  metadata:
+    noPickup: true
+- id: "rustysword"
+  name: "Rusty Sword"
+  type: WEAPON
+  roomDesc: "Rusted Sword"
+  keywords: [ "sword", "rusty", "metal", "rusted" ]
+  description: "An arm's-length, jagged metal sword discolored with red corrosion. The worn leather grip barely held on by fraying thread."
+  metadata:
+    level: 1
+    slot: 'wield'
+    itemLevel: 1
+    quality: common
+    minDamage: 7
+    maxDamage: 15
+    speed: 2.8
+    stats:
+      critical: 1
+- id: "paper"
+  name: "Parchment"
+  roomDesc: "A strange piece of folded parchment"
+  keywords: [ "strange", "piece", "folded", "parchment" ]
+  description: " x0,y0 ,  x1,y0 ,
+   x2,y0 ,  x2,y1 ,
+   x3,y1 ,  x3,y2 ,
+   x3,y3 ,  x4,y3 ,
+   x4,y2 ,  x4,y1 ,
+   x5,y1 ,  x6,y1 ,
+   x7,y1 ,  x7,y2 ,
+   x6,y2 ,  x5,y2 ,
+   x5,y3 ,  x5,y4 ,
+   x6,y4 ,  x6,y5 ,
+   x6,y6 ,  x7,y6 ,
+   x7,y7"
+  #description: 0,0 , 1,0 , 2,0 , 2,1 , 3,1 , 3,2 , 3,3 , 4,3 , 4,2 , 4,1 , 5,1 , 6,1 , 7,1 , 7,2 , 6,2 , 5,2 , 5,3 , 5,4 , 6,4 , 6,5 , 6,6 , 7,6 , 7,7
+  #description: there's writing in it, though it seems fairly old and some details are missing...          0,0 , 1,0 , 2,0 , 2,1 , 3,1 , 3,2 , 3,❔ , 4,3 , 4,2 , ❔,1 , 5,1 , ❔,❔ , 7,1 , 7,2 , ❔,❔ , 5,2 , 5,3 , ❔,4 , ❔,❔ , ❔,5 , 6,6 , ❔,6 , ❔,7
+- id: "desk"
+  type: CONTAINER
+  name: "Old Desk"
+  roomDesc: "An old desk"
+  keywords: [ "old", "desk", "old-desk" ]
+  items: ["house:paper"]
+  description: "This desk, opulently crafted of fine walnut, seems out of place in this otherwise frugal study. The elegant cabriole legs of the desk curve and taper, and the panels are carved with embellishments that show a proud Lion face amidst a congregation of other animals: exotic penguins, playful raccoons, leaping whales. The wood finish of the desktop bears the scars of the claws that toiled here for a hundred years or more. Most notably, a strange piece of folded <b>parchment</b> rests on the desktop."
+  metadata:
+    noPickup: true
+- id: "lion-1"
+  name: "An old painting"
+  roomDesc: "An old painting"
+  keywords: [ "old", "painting", 'old-painting', 'an-old-painting' ]
+  description: "An old portrait hangs from the wall.<image>industry.jpg<image>"
+  metadata:
+    noPickup: true
+- id: "sliceofcheese"
+  name: "Slice of Cheese"
+  roomDesc: "A moldy slice of cheese"
+  keywords: [ "slice", "cheese", "moldy" ]
+  description: "A yellow, slightly moldy slice of cheese. Only a rat could find this appetizing.<image>cheese.png<image>"
+  behaviors:
+    decay:
+      duration: 240
+- id: "strange-box"
+  type: CONTAINER
+  name: "Strange Looking Box"
+  roomDesc: "A strange looking box"
+  keywords: [ "box", "strange" , "strange-box"]
+  description: "On a wooden shelf close to the window, you find a small, strange-looking box gleaming in the weak light of the moon through the fog. It is intricately crafted, with a design showing a Lion standing on the back of a whale"
+  items: [ "house:silver-key"]
+  closed: true
+  maxItems: 1
+  metadata:
+    noPickup: true
+- id: silver-key
+  name: "Silver Key"
+  keywords: ["key", "silver", "small", "silver key", "silver-key"]
+  roomDesc: "A small silver key"
+  description: "Small silver key, with a Lion head bow and a fin-shaped shank."
+  metadata:
+    quality: common
+- id: bronze-key
+  name: "Bronze Key"
+  keywords: ["key", "bronze", "small", "bronze-key"]
+  roomDesc: "A small bronze key"
+  description: "Small bronze key."
+  metadata:
+    quality: common
+- id: iron-key
+  name: "Iron Key"
+  keywords: ["key", "iron", "large", "iron key", "iron-key"]
+  roomDesc: "A large iron key"
+  description: "Large iron key."
+  metadata:
+    quality: common
+- id: gold-key
+  name: "Gold Key"
+  keywords: ["key", "gold", "golden", "small", "gold-key"]
+  roomDesc: "A small golden key"
+  description: "Small golden key."
+  metadata:
+    quality: common
+- id: pool
+  name: "Pool"
+  keywords: ["pool", "water", "black", "pool-of-black-water"]
+  roomDesc: "A pool of black water"
+  description: >-
+    The basin is of ancient design and you wonder for a moment how long it has existed here in secret and in silence, deep below the tumult of the city. Two worn stone gargoyles perch on opposite sides of the rim, facing the water. You approach cautiously, drawn to the mysterious pool but with a rising sense of dread in your stomach. You slowly peer over the side of the basin, seeing your reflection perfectly in the stone-still water. From somewhere deep in the chambers of the cellars, you suddenly hear a clock chiming: Bong! Bong! Bong!, and as the long metallic resonance fades, a deep aching chill in your bones abides.
+  metadata:
+    noPickup: true
+- id: old-parchment
+  name: "Scroll"
+  keywords: ["scroll", "old", "paper"]
+  roomDesc: "An ancient scroll"
+  description: >-
+    Inside the chest is a single <b>scroll</b> of ancient origin. You take care to unroll it slowly, and you mind your claws on the delicate parchment. In careful and precise penmanship, it states: "May you, the Lion who now reads this missive, be of sterling character and carry a generosity of spirit to redound to the Pride. Your discoveries herein belong to you, but it is my chiefest hope, that you should find the spirit in your heart to use this gift to the benefit of all Lions. - Ebenezfur Scrooge" 1) Scrapbook, 2) Recipe, 3) Tapestry, 4) Pail, 5) Painting, 6) Bell, 7) Certificate, 8) Fireplace, 9) Suit of Armor - #1, 10) Shirts, 11) Casks, 12) Mirror, 13) Book, 14) Clock, 15) Windows, 16) Bed, 17) Pool, 18) Window, 19) Pyramid #1, 20) Door-knocker, 21) Bench, 22) Pyramid #3, 23) Suit of Armor #2, 24) Pyramid #2
+- id: "woodenchest"
+  type: CONTAINER
+  name: "Wooden Chest"
+  roomDesc: "A chest"
+  keywords: [ "wooden", "chest", "wooden-chest"]
+  description: >-
+    This chest is old, very old, but judging by the heavy wood and metal straps that bind it, still sturdy as well. A curious gleaming silver lock hangs from the latch, with a tiny etching of a Lion and a Whale.
+  items: [ "house:old-parchment" ]
+  closed: true
+  locked: true
+  lockedBy: "house:silver-key"
+  maxItems: 1
+  metadata:
+    noPickup: true
+- id: suit-of-armor
+  name: "Suit of Armor"
+  type: ARMOR
+  roomDesc: "A suit of armor"
+  keywords: ["suit", "armor", "suit-of-armor"]
+  description: >-
+    Immediately upon looking at this suit of armor, you can tell it is an incredible piece of both craftsmanship and history, and you wonder why it stands alone and forgotten in this cellar. Upon inspection, you see a beautiful design filigreed onto the breastplate of Lions rampant, surrounded by arabesques of trees and fluttering birds. In delicate script upon the gauntlets, you see the words, "VICTORY," and "GLORY."
+  metadata:
+    noPickup: true
+    quality: common
+    slot: "chest"
+    level: 1
+    itemLevel: 1
+    stats:
+      armor: 20
+    sellable:
+      value: 30
+      currency: gold
+- id: pasteboard-box
+  name: "Small Pasteboard Box"
+  keywords: ["pasteboard", "box", "parcel", "small-pasteboard-box"]
+  roomDesc: "A small pasteboard box"
+  description: >-
+    The small pasteboard box is full of nails. Doornails, to be precise, and dead ones.
+  metadata:
+    noPickup: true
+- id: bones
+  name: "Bones"
+  keywords: ["bones"]
+  roomDesc: "Bones"
+  metadata:
+    noPickup: true
+  description: >-
+    Upon further inspection, you are relieved to discover that these bones are not actual bones at all, but simply paper-mache replicas from some Cub's discarded science exam. What a relief!
+- id: the-one-ring
+  name: "Ring"
+  keywords: ["ring", "bane"]
+  roomDesc: "A ring"
+  description: >-
+    It appears to be but a simple gold ring, though as you move your lantern closer to inspect it, you see, briefly, the delicate Elvish Tengwar script enscribed on the band, writing that glows brighter the closer you bring the flame. Your suspicions are confirmed: this is The One Ring, the Bane of Isildur, forged in secret by the Dark Lord Sauron in the fires of Mount Doom to gain dominion over the free peoples of Middle-Earth. It's probably best you just leave it where it is. You have more important things on your mind.
+  metadata:
+    quality: common
+    slot: "finger"
+    level: 10
+    itemLevel: 10
+    stats:
+      armor: 99
+    sellable:
+      value: 999
+      currency: gold
+    noPickup: true

@@ -1,0 +1,6 @@
+---
+command: save
+body: |
+  Save current player state, location and inventory
+related:
+- quit
