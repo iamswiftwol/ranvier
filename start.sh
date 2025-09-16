@@ -1,2 +1,2 @@
-cd /home/zed/Ranvier/ranviermud/
+cd /home/zed/ranvier/
 forever start ranvier

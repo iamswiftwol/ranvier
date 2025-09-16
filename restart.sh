@@ -1,4 +1,4 @@
-cd /home/zed/Ranvier/ranviermud/
+cd /home/zed/ranvier/
 forever stop ranvier
 forever start ranvier
 sleep 1
