@@ -3,9 +3,9 @@
 // import 3rd party websocket library
 const TelegramBot = require('node-telegram-bot-api');
 // lionworts test
-//const token = '8398646489:AAG8A2EnYXbrKb90ofyH6sN3eoUDOtnKWJk';
+const token = '8398646489:AAG8A2EnYXbrKb90ofyH6sN3eoUDOtnKWJk';
 // lioncraft christmas mud
-const token = '6559453109:AAEA1GLzCUc25ACEOer-jItv3bZgCOfHUm4';
+//const token = '6559453109:AAEA1GLzCUc25ACEOer-jItv3bZgCOfHUm4';
 
 
 const { Logger } = require('ranvier');
